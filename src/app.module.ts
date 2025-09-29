@@ -1,5 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Produto } from './Produto/entities/produto.entity';
+import { ProdutoModule } from './Produto/produto.module';
 
 @Module({
   imports: [
@@ -10,9 +12,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: 'root',
       password: 'root',
       database: 'db_logagames',
-      entities: [],
+      entities: [Produto],
       synchronize: true,
     }),
+    ProdutoModule,
     
   ],
   controllers: [],
