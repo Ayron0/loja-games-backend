@@ -67,4 +67,6 @@ export class ProdutoService {
         return await this.produtoRepository.delete(id)
     }
 
+    //CRUD do produto Finalizado
+
 }
