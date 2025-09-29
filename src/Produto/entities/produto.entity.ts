@@ -1,7 +1,7 @@
 import { IsNotEmpty } from 'class-validator';
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 
-@Entity({name: "tb_categorias"})
+@Entity({name: "tb_produtos"})
 export class Produto{
     @PrimaryGeneratedColumn()
     id: number //id PRIMARY KEY AUTO_INCREMENT
