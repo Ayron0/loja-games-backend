@@ -7,7 +7,7 @@ import { Categoria } from "../entities/categoria.entity";
 export class CategoriaService {
     constructor(
         @InjectRepository(Categoria)
-        private CategoriaRepository: Repository<Categoria>
+        private categoriaRepository: Repository<Categoria>
     ) { }
 
     async findAll(): Promise<Categoria[]> {
@@ -47,12 +47,12 @@ export class CategoriaService {
     }
 
     async create(Categoria: Categoria): Promise<Categoria> {
-        return await this.CategoriaRepository.save(Categoria);
+        return await this.categoriaRepository.save(Categoria);
     }
 
     async update(categoria: Categoria): Promise<Categoria> {
 
-        await this.findById(Categoria.id);
+        await this.findById(categoria.id);
 
         return await this.categoriaRepository.save(categoria);
     }
