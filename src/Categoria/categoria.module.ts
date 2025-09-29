@@ -8,4 +8,4 @@ import { Categoria } from "./entities/categoria.entity"
     controllers: [],
     exports: []
 })
-export class TemaModule {}
+export class CategoriaModule {}
