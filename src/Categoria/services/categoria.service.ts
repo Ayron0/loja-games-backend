@@ -20,7 +20,7 @@ export class CategoriaService {
 
     async findById(id: number): Promise<Categoria> {
 
-        let Categoria = await this.categoriaRepository.findOne({
+        let categoria = await this.categoriaRepository.findOne({
             where: {
                 id
             },
@@ -29,10 +29,10 @@ export class CategoriaService {
             }
         });
 
-        if (!Categoria)
+        if (!categoria)
             throw new HttpException('Categoria não encontrado!', HttpStatus.NOT_FOUND);
 
-        return Categoria;
+        return categoria;
     }
 
     async findAllByTipo(tipo: string): Promise<Categoria[]> {
